@@ -1,7 +1,6 @@
 package fi.oscar.msscbrewery.web.controller;
 
 import fi.oscar.msscbrewery.services.CustomerService;
-import fi.oscar.msscbrewery.web.model.BeerDto;
 import fi.oscar.msscbrewery.web.model.CustomerDto;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
@@ -42,7 +41,7 @@ public class CustomerController {
 
 		HttpHeaders headers = new HttpHeaders();
 		// TODO: add hostname to url
-		headers.add("Location", "/api/v1/beer/" + savedDto.getId().toString());
+		headers.add("Location", "/api/v1/customer/" + savedDto.getId().toString());
 
 		return new ResponseEntity(headers, HttpStatus.CREATED);
 	}
